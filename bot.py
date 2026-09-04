@@ -63,16 +63,19 @@ async def main(nama, email, c):
         #await page.screenshot(path=f"{c}_4hall.png")
         # 7. Filter booth
         await page.mouse.click(420, 30)
-        await page.wait_for_timeout(1000)
+        await page.wait_for_timeout(3000)
         #await page.screenshot(path=f"{c}_5filter.png")
         await page.keyboard.type("UKPBJ KEMENTERIAN IM")
         await page.wait_for_timeout(2000)
         #await page.screenshot(path=f"{c}_6booth.png")
         await page.keyboard.press("Enter")
-        await page.wait_for_timeout(2000)
+        await page.wait_for_timeout(1000)
+        await page.mouse.click(420, 30)
         await page.keyboard.press("Enter")
         await page.wait_for_timeout(2000)
-        await page.mouse.click(170, 662)
+        #await page.mouse.click(357, 624) #video
+        await page.mouse.click(170, 662) #poster kiri
+        #await page.mouse.click(540, 662) #poster kanan
         await page.wait_for_timeout(2000)
         await page.mouse.click(170, 662)
         await page.wait_for_timeout(2000)
